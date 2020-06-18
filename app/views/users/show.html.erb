@@ -3,6 +3,7 @@
  <link rel = "stylesheet" href="styles.css">
 <body>
 <%= link_to 'Add Friend', user_new_friend_path(@user.id) %></p>
+<%= link_to  "Edit Profile", edit_user_path(params[:id]) %>
 <% if flash[:notice] %>
   <%= flash[:notice] %>
   <% end %>

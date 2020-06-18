@@ -1,11 +1,12 @@
 
-
-<p><%= link_to 'Add Friend', user_new_friend_path(@user.id) %></p>
-
+ 
+ <link rel = "stylesheet" href="styles.css">
+<body>
+<%= link_to 'Add Friend', user_new_friend_path(@user.id) %></p>
 <% if flash[:notice] %>
   <%= flash[:notice] %>
   <% end %>
-  
+
 <h1> List of Items</h1>
 
 <% @user.items.map do |item| %>
@@ -46,12 +47,10 @@
       <% end %>
 
 <br>
-<p>_________________________________________________</p>
-<p>_________________________________________________</p>
 <br>
 <br>
 <% end %>
 
 <p><%= link_to "Add Item", new_user_item_path(@user.id) %></p>
-
+</body>
 
